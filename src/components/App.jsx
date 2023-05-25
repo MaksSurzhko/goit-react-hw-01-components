@@ -18,7 +18,8 @@
 
 import Profile from "../users/Profile"
 import user from "../users/user.json"
-import data from "../data/data"
+import Data from "../data/Data"
+import data from "../data/data.json"
 
 
 export default function App() {
@@ -38,6 +39,16 @@ export default function App() {
   )
 }
 
-
+export default function Datas() {
+  return (
+    <div>
+      <Data 
+        id={data.id}
+        label={data.label}
+        percentage={data.percentage}
+        />
+    </div>
+  )
+}
 
 
