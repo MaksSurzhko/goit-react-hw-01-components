@@ -18,9 +18,12 @@
 
 import Profile from "../users/Profile"
 import user from "../users/user.json"
-import Data from "../data/Data"
-import data from "../data/data.json"
 
+import Statistic from "../statistics/Statistic"
+import data from "../statistics/data.json"
+
+import FriendList from "../friends/FriendList"
+import friends from "../friends/friends.json"
 
 export default function App() {
   return(
@@ -35,20 +38,20 @@ export default function App() {
       views={user.views} 
       likes={user.likes}
       />
+
+
+      <Statistic title="Upload stats" stats={data} />
+      <Statistic stats={data} />
+
+
+      <FriendList friends={friends} />;
+      
     </div>
   )
 }
 
-export default function Datas() {
-  return (
-    <div>
-      <Data 
-        id={data.id}
-        label={data.label}
-        percentage={data.percentage}
-        />
-    </div>
-  )
-}
+
+
+
 
 
