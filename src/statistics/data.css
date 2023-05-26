@@ -1,0 +1,43 @@
+.statistics{
+    background-color: rgb(75, 75, 72);
+    margin-top: 80px;
+    padding: 50px;
+}
+
+.title{
+    color: beige;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-list{
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    background-color: royalblue;
+    padding: 20px;
+    border: 2px solid white;
+    width: 50px;
+}
+
+.labels{
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.percentage{
+    margin-top: 8px;
+    color: white;
+    font-weight: 750;
+    display: flex;
+        justify-content: center;
+}
