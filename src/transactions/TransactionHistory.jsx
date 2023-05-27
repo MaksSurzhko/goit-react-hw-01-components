@@ -8,7 +8,8 @@ const transHistory = () => (
       <th className="transaction">Type</th>
       <th className="transaction">Amount</th>
       <th className="transaction">Currency</th>
-    </tr>
+            </tr>
+    
         <tbody>
         {trans.map((itemsy) => (
         <tr key ={itemsy.id}>
@@ -18,8 +19,8 @@ const transHistory = () => (
         </tr>
         ))}
         </tbody>
-     
-    </thead>
+     </thead>
+    
         </table>
 )
    export default transHistory 
