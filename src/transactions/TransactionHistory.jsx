@@ -1,19 +1,20 @@
 import trans from "../transactions/transactions.json"
+import "./transactions.css"
 
 const transHistory = () => (
-    <table className="transaction-history">
+    <table className="transaction-history" >
   <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+    <tr className="transaction">
+      <th className="transaction">Type</th>
+      <th className="transaction">Amount</th>
+      <th className="transaction">Currency</th>
     </tr>
         <tbody>
         {trans.map((itemsy) => (
-        <tr>
-      <td>{itemsy.type}</td>
-      <td>{itemsy.amount}</td>
-      <td>{itemsy.currency}</td>
+        <tr key ={itemsy.id}>
+      <td className="transaction">{itemsy.type}</td>
+      <td className="transaction">{itemsy.amount}</td>
+      <td className="transaction">{itemsy.currency}</td>
         </tr>
         ))}
         </tbody>

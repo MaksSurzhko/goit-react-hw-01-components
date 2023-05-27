@@ -30,10 +30,11 @@ export default friendsList*/
 
 
 import friends from "../friends/friends.json"
-
+import "./friends.css"
+console.log(friends)
 const friendsList = () => (
 
-    <ul className="friend-list">
+  <ul className="friend-list">
       {friends.map((item) => (
       <li className="items" key={item.id}>
       <span className="status">{item.isOnline}</span>
