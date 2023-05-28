@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.stat-list{
+.statlist{
     display: flex;
     padding: 0;
     justify-content: center;
@@ -27,7 +27,7 @@
     width: 50px;
 }
 
-.labels{
+.label{
     color: white;
     font-weight: 500;
     display: flex;

@@ -29,8 +29,8 @@ const friendsList = () => {
 export default friendsList*/
 
 
-import friends from "../friends/friends.json"
-import "./friends.css"
+/*import friends from "../friends/friends.json"
+import "../friends/friends.css"
 console.log(friends)
 const friendsList = () => (
 
@@ -45,4 +45,35 @@ const friendsList = () => (
     </ul>
 );
 
-export default friendsList;
+export default friendsList;*/
+
+import React from "react";
+import friends from "../friends/friends.json";
+import fcss from "../friends/friends.module.css";
+
+const FriendListItem = ({ avatar, name, isOnline }) => {
+  const statusClassName = isOnline ? fcss.online: fcss.offline;
+  
+  return (
+    <li className={fcss.items}>
+      <span className={`${fcss.status} ${statusClassName}`}></span>
+      <img className={fcss.avatar} src={avatar} alt="User avatar" width="42" />
+      <p className={fcss.name}>{name}</p>
+    </li>
+  );
+};
+
+const FriendsList = () => (
+  <ul className={fcss.friendlist}>
+    {friends.map((friend) => (
+      <FriendListItem
+        key={friend.id}
+        avatar={friend.avatar}
+        name={friend.name}
+        isOnline={friend.isOnline}
+      />
+    ))}
+  </ul>
+);
+
+export default FriendsList;

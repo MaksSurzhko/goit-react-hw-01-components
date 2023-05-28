@@ -36,12 +36,12 @@
  export default Statistic*/
 
 
-import data from "../statistics/data.json";
-import "./data.css"
+/*import data from "../statistics/data.json";
+import "../statistics/data.css"
 
 const Statistic = () => (
   <section className="statistics">
-    <h2 className="title">Upload stats</h2>
+    <h2 className="title">Upload Stats</h2>
 
     <ul className="stat-list">
       {data.map((item) => (
@@ -54,6 +54,27 @@ const Statistic = () => (
   </section>
 );
 
-export default Statistic;
+export default Statistic;*/
 
  
+
+import React from "react";
+import data from "../statistics/data.json";
+import dcss from "../statistics/data.module.css";
+
+const Statistic = ({ title }) => (
+  <section className={dcss.statistics}>
+    {title && <h2 className={dcss.title}>{title}</h2>}
+
+    <ul className={dcss.statlist}>
+      {data.map((item) => (
+        <li key={item.id} className={dcss.item}>
+          <span className={dcss.label}>{item.label}</span>
+          <span className={dcss.percentage}>{item.percentage}%</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+);
+
+export default Statistic;

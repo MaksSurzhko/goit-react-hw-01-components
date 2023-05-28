@@ -16,16 +16,16 @@
 };*/
 
 
-import Profile from "../users/Profile";
+import Profile from "./Profile";
 import user from "../users/user.json";
 
-import Statistic from "../statistics/Statistic";
+import Statistic from "./Statistic";
 import data from "../statistics/data.json";
 
-import FriendList from "../friends/FriendList";
+import FriendList from "./FriendList";
 import friends from "../friends/friends.json";
 
-import TransactionHistory from "../transactions/TransactionHistory";
+import TransactionHistory from "./TransactionHistory";
 import transactions from "../transactions/transactions.json"
 
 export default function App() {
