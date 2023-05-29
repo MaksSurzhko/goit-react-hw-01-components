@@ -47,8 +47,10 @@ const friendsList = () => (
 
 export default friendsList;*/
 
+
+import PropTypes from 'prop-types';
 import React from "react";
-import friends from "../friends/friends.json";
+import friends from "./friends.json";
 import fcss from "../friends/friends.module.css";
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
@@ -77,3 +79,9 @@ const FriendsList = () => (
 );
 
 export default FriendsList;
+
+FriendListItem.propTypes = {
+  id:PropTypes.string,
+  avatar:PropTypes.string,
+  name:PropTypes.string,
+}

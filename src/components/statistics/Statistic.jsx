@@ -57,9 +57,9 @@ const Statistic = () => (
 export default Statistic;*/
 
  
-
+import PropTypes from 'prop-types';
 import React from "react";
-import data from "../statistics/data.json";
+import data from "./data.json";
 import dcss from "../statistics/data.module.css";
 
 const Statistic = ({ title }) => (
@@ -78,3 +78,12 @@ const Statistic = ({ title }) => (
 );
 
 export default Statistic;
+
+Statistic.propTypes = {
+    title:PropTypes.string,
+    item:PropTypes.string,
+    id:PropTypes.string,
+    label:PropTypes.string,
+    percentage:PropTypes.string,
+     
+  }

@@ -1,4 +1,4 @@
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
  
 import ucss from "../users/user.module.css"
 
@@ -33,4 +33,14 @@ import ucss from "../users/user.module.css"
   </div>
     );
   };
-  export default Profile
+export default Profile
+  
+Profile.propTypes = {
+    username:PropTypes.string,
+    tag:PropTypes.string,
+    location:PropTypes.string,
+    avatar:PropTypes.string,  
+    followers:PropTypes.string,
+    views:PropTypes.string,
+    likes:PropTypes.string,
+  }
